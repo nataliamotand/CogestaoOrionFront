@@ -1,1 +1,2 @@
-export { default as Home } from "./pages/Home";
+import Home from "./Home";
+export default Home;
