@@ -8,6 +8,7 @@ import Button from "../../styles/Button";
 import Title from "../../styles/Title";
 
 import * as ManagerService from "../../services/ManagerService";
+import api from "../../services/api";
 
 function Login() {
   let [email, setEmail] = useState("");
