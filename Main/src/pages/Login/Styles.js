@@ -10,6 +10,12 @@ export const TextButton = styled.Text`
 export const TextLabel = styled.Text`
   font-size: 16px;
   padding-bottom: 20px;
+  color: ${(props) => (props.erro ? "red" : "black")};
+`;
+
+export const TextError = styled.Text`
+  font-size: 13px;
+  color: red;
 `;
 
 export const ViewLogin = styled.View`

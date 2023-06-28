@@ -1,6 +1,9 @@
 import * as requesterService from "./RequesterService";
 
 export const requisicaoLogin = async (email) => {
-  const resposta = await requesterService.login(email);
-  console.log(resposta);
+  try {
+    return await requesterService.login(email);
+  } catch (error) {
+    return error;
+  }
 };
