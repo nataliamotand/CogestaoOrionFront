@@ -7,12 +7,14 @@ import ViewGlobal from "../../styles/ViewGlobal";
 import Button from "../../styles/Button";
 import Title from "../../styles/Title";
 
+import * as ManagerService from "../../services/ManagerService";
+
 function Login() {
   let [email, setEmail] = useState("");
   let [erroEmail, setErroEmail] = useState(false);
 
   function login() {
-    console.log(email);
+    const requisicao = ManagerService.requisicaoLogin(email);
   }
 
   return (
