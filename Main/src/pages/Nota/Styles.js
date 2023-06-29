@@ -31,5 +31,5 @@ export const ViewTitle = styled(ViewInputs)`
 
 export const TextLink = styled.Text`
   color: #6766f6;
-  font-size: 25;
+  font-size: 25px;
 `;

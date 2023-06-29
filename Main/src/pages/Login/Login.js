@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { View, Image } from "react-native";
 import { TextButton, TextError, TextLabel, ViewLogin } from "./Styles";
-import { SvgUri } from "react-native-svg";
 
 import Input from "../../styles/Input";
 import ViewGlobal from "../../styles/ViewGlobal";

@@ -26,8 +26,8 @@ function Routes() {
           options={{ headerShown: false }}
           name="Login"
           component={Login}
-        />
-        */}
+        /> */}
+
         <Stack.Screen
           options={{ headerShown: false }}
           name="Nota"
