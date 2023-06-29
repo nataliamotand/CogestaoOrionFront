@@ -19,6 +19,7 @@ export const TextError = styled.Text`
 `;
 
 export const ViewLogin = styled.View`
+  margin-bottom: 70%;
   width: 80%;
   justify-content: space-evenly;
   height: 380px;

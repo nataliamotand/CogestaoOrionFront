@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { View, TouchableOpacity } from "react-native";
+import { View, Image } from "react-native";
 import { TextButton, TextError, TextLabel, ViewLogin } from "./Styles";
+import { SvgUri } from "react-native-svg";
 
 import Input from "../../styles/Input";
 import ViewGlobal from "../../styles/ViewGlobal";
@@ -10,7 +11,9 @@ import Title from "../../styles/Title";
 import * as SecureStore from "expo-secure-store";
 import * as ManagerService from "../../services/ManagerService";
 
-function Login() {
+import logo from "../../assets/logo.png";
+
+function Login({ navigation }) {
   let [email, setEmail] = useState("");
   let [erroEmail, setErroEmail] = useState(false);
   let [emailNaoRegistrado, setEmailNaoRegistrado] = useState(false);
@@ -25,7 +28,7 @@ function Login() {
 
     await SecureStore.setItemAsync("secure_token", resposta.data.token);
     const token = await SecureStore.getItemAsync("secure_token");
-    //FAZER A NAVEGAÇÃO PARA A HOME
+    navigation.navigate("Home");
   }
 
   return (
@@ -49,6 +52,11 @@ function Login() {
           <TextButton>Login</TextButton>
         </Button>
       </ViewLogin>
+      {/* passar essa bomba pra svg se der */}
+      <Image
+        style={{ transform: [{ scale: 0.9 }] }}
+        source={(require = logo)}
+      />
     </ViewGlobal>
   );
 }
